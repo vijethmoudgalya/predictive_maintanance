@@ -14,23 +14,23 @@ stages:
     - src/stage_03_split_data.py
     - data/processed/train.csv
     outs:
-    - data/processed/train_predictive_maint.csv
-    - data/processed/test_predictive_maint.csv 
+    - data/interim/train_predictive_maint.csv
+    - data/interim/test_predictive_maint.csv 
 
   train_and_evaluate:
     cmd: python src/stage_04_train_and_evaluate.py --config=params.yaml
     deps:
-    - data/processed/train_predictive_maint.csv
-    - data/processed/test_predictive_maint.csv 
+    - data/interim/train_predictive_maint.csv
+    - data/interim/test_predictive_maint.csv 
     - src/stage_04_train_and_evaluate.py
     params:
     - estimators.RandomForestRegressor.params.n_estimators
     - estimators.RandomForestRegressor.params.max_features
     - estimators.RandomForestRegressor.params.min_samples_split
     metrics:
-    - report/scores.json:
+    - reports/scores.json:
         cache: false
-    - report/params.json:
+    - reports/params.json:
         cache: false
     outs:
     - saved_models/model.joblib
