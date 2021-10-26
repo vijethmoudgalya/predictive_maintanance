@@ -7,3 +7,12 @@ stages:
     - data/raw/train.csv
     outs:
     - data/processed/train.csv
+
+  split_data:
+    cmd: python src/stage_03_split_data.py --config=params.yaml
+    deps:
+    - src/stage_03_split_data.py
+    - data/processed/train.csv
+    outs:
+    - data/processed/train_predictive_maint.csv
+    - data/processed/test_predictive_maint.csv 
