@@ -8,5 +8,9 @@ coverage
 awscli
 flake8
 pandas
+dvcs
+dvc[gdrive]
+pytest
+tox
 sklearn
 python-dotenv>=0.5.1
