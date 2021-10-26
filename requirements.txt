@@ -7,4 +7,6 @@ Sphinx
 coverage
 awscli
 flake8
+pandas
+sklearn
 python-dotenv>=0.5.1

@@ -1,0 +1,30 @@
+base:
+  project: predicitve_maintanance-project
+  random_state: 42
+  target_col: ttf
+
+data_source:
+  s3_source: data/raw/train.csv
+
+load_data:
+  raw_dataset_csv: data/raw/train.csv
+
+split_data:
+  train_path: data/processed/train_predictive_maint.csv
+  test_path: data/processed/test_predictive_maint.csv
+  test_size: 0.2
+
+estimators:
+  RandomForestRegressor:
+    params:
+      n_estimators: 30
+      max_features: "auto"
+      min_samples_split: 2
+      bootstrap: True
+model_dir: saved_models
+
+reports:
+  params: report/params.json
+  scores: report/scores.json
+
+#webapp_model_dir: prediction_service/model/model.joblib
