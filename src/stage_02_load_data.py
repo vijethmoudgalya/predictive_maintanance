@@ -17,7 +17,7 @@ def data_load(config_path):
 
         config = read_params(config_path)
         data = get_data(config_path)
-        columns = config['load_data']['columns']
+        columns = config['load_data']['rem_column']
         highly_corelated_cols = get_highly_correlated_cols(data)
         data_processed = drop_highly_corelated_cols(data, highly_corelated_cols)
         data = dropUnnecessaryColumns(data_processed,columns)
