@@ -8,11 +8,11 @@ data_source:
 
 load_data:
   raw_dataset_csv: data/processed/train.csv
-  rem_column:id
+  rem_column: id
 
 split_data:
-  train_path: data/processed/train_predictive_maint.csv
-  test_path: data/processed/test_predictive_maint.csv
+  train_path: data/interim/train_predictive_maint.csv
+  test_path: data/interim/test_predictive_maint.csv
   test_size: 0.2
 
 estimators:
