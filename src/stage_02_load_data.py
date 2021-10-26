@@ -3,7 +3,7 @@ from stage_01_get_data import read_params,get_data
 from utils.preprcocessing import get_highly_correlated_cols,drop_highly_corelated_cols,dropUnnecessaryColumns
 import argparse
 import os
-import numpy as np
+
 
 
 def data_load(config_path):
