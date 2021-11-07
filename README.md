@@ -14,9 +14,13 @@ maintenance plan based on prediction of engines failure per period
 # Data:
 Text files contain simulated aircraft engine run-to-failure events, operational settings, and 21 sensors measurements are provided by Microsoft. It is assumed that the engine progressing degradation pattern is reflected in its sensor measurements.
 
-Training Data: The aircraft engine run-to-failure data. download trianing data
-Test Data: The aircraft engine operating data without failure events recorded. download test data
-ground Truth Data: The true remaining cycles for each engine in the testing data. download truth data
+___Training Data:___  The aircraft engine run-to-failure data.
+[download trianing data](http://azuremlsamples.azureml.net/templatedata/PM_train.txt)  
+___Test Data:___ The aircraft engine operating data without failure events recorded.
+[download test data](http://azuremlsamples.azureml.net/templatedata/PM_test.txt)  
+___Ground Truth Data:___ The true remaining cycles for each engine in the testing data.
+[download truth data](http://azuremlsamples.azureml.net/templatedata/PM_truth.txt)
+
 
 # Approach:
 By exploring the aircraft engine’s sensor values over time, the machine learning algorithm can learn the relationship between the sensor values and changes in sensor values to the historical failures in order to predict failures in the future.
